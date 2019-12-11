@@ -8,18 +8,19 @@ client.once('ready', () => {
 })
 
 client.on("message", (message) => {
-    if (message.content.startsWith("-kick")) {
-        var member = message.mentions.members.first();
+/*    if (message.content.startsWith("-kick")) {
+       var member = message.mentions.members.first();
         if (member != null) {
             member.kick().then((member) => {
                 message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
-            }).catch(() => {
+           }).catch(() => {
                 message.channel.send("Access Denied");
             });
         } else {
             message.channel.send('use format \'@username\'');
         }
     }
+*/
     if (message.content === '-marco') {
         message.channel.send('Polo');
     }
