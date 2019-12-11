@@ -1,15 +1,14 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '!';
 
-const token = 'NjU0MjAzMjA1NzY0NTEzNzk0.XfCIdA.3KafbwbC18YhcMuYsuCsVBqHc7c';
+const token = 'NjU0MjAzMjA1NzY0NTEzNzk0.XfClVw.YoKSpm2yjVaPA7DLrc1A_Nc7iOw';
 
 client.once('ready', () => {
-    console.log('Bolt24 online')
+    console.log('Bolt24 is now online')
 })
 
 client.on("message", (message) => {
-    if (message.content.startsWith("/kick")) {
+    if (message.content.startsWith("-kick")) {
         var member = message.mentions.members.first();
         if (member != null) {
             member.kick().then((member) => {
@@ -20,6 +19,12 @@ client.on("message", (message) => {
         } else {
             message.channel.send('use format \'@username\'');
         }
+    }
+    if (message.content === '-marco') {
+        message.channel.send('Polo');
+    }
+    if (message.content === '-ping') {
+        message.channel.send('Pong');
     }
 });
 
